@@ -1,5 +1,8 @@
 
 import './App.css'
+import Head from './Component/Head'
+
+import Body from './Component/Body'
 
 function App() {
  
@@ -7,7 +10,9 @@ function App() {
   return (
    
       <div className=''>
-      hello
+      <Head/>
+      <Body/>
+      
       </div>
      
   )
