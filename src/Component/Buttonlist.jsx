@@ -9,7 +9,11 @@ const Buttonlist = () => {
     <Button name="Football"/>
     <Button name="cooking"/>
     <Button name="Livestream"/>
+    <Button name="Livestream"/>
+    <Button name="Livestream"/>
     <Button name="Bollywood"/>
+    <Button name="News"/>
+    <Button name="News"/>
     <Button name="News"/>
     <Button name="Speed"/>
     

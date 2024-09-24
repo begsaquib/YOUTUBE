@@ -3,6 +3,11 @@ import Head from "./Component/Head";
 import Body from "./Component/Body";
 import { Provider } from "react-redux";
 import store from "./utils/store";
+import { createBrowserRouter } from "react-router-dom";
+
+const appRouter=createBrowserRouter([{
+  
+}])
 
 
 function App() {
