@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Youtube_VideosApi } from "../utils/constant";
 import VideoCard from "./VideoCard";
+import { Link } from "react-router-dom";
 
 const VideoContainer = () => {
-  const [videos,setVideos] = useState([])
+  const [videos, setVideos] = useState([]);
   useEffect(() => {
     getVideos();
   }, []);
@@ -11,16 +12,16 @@ const VideoContainer = () => {
   const getVideos = async () => {
     const data = await fetch(Youtube_VideosApi);
     const json = await data.json();
-     console.log(json.items);
-     setVideos(json.items)
+    setVideos(json.items);
   };
-  
- 
-  return( <div className="flex flex-wrap">
-    {videos.map(video=> <VideoCard key={video.id} info={video}/>)}
-   
-  </div>
-  )
+
+  return (
+    <div className="flex flex-wrap">
+      {videos.map((video) => (
+        <Link key={video.id} to={"/watch?v=" + video.id}><VideoCard  info={video} /></Link>
+      ))}
+    </div>
+  );
 };
 
 export default VideoContainer;
